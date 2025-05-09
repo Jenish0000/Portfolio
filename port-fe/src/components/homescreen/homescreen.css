@@ -1,0 +1,2001 @@
+   @import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&family=National+Park:wght@200..800&display=swap'); */
+   :root { 
+      --body_background: white;
+      --body_color: rgb(27, 26, 26);
+      --text_color: #000;
+      --light_color:#c8c8c8;
+      --grey_color:#6e6a6a;
+    }
+  
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(142, 158, 171), rgb(238, 242, 243));
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0.9;
+}
+.overlayforProjectTwo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(142, 158, 171), rgb(238, 242, 243));
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0.9;
+}
+.imageBox:hover .overlay {
+  transform: translateX(0);
+}
+.projectTwoBox:hover .overlayforProjectTwo{
+  transform: translateX(0);
+}
+.projectOne {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.imageBox:hover .projectOne {
+  transform: scale(0.9);
+  height: 200px;
+}
+.projectTwoBox:hover .projectTwo {
+  transform: scale(0.6);
+}
+
+
+  .projectTwoBox{
+    position: relative;
+  }
+  .overlayTwo ,.overlayTwoForProjectTwo{
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeInOverlay 0.5s ease forwards;
+}
+.modalContentForProjectTwo{
+  height: 100%;
+  width: 100%;
+  background:#000;
+  animation: slideDown 0.5s ease forwards;
+}
+
+  .modalContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background:#000;
+    animation: slideDown 0.5s ease forwards;
+  }
+
+  @keyframes fadeInOverlay {
+    from {
+      background: rgba(0, 0, 0, 0);
+    }
+    to {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  /* Modal content sliding down */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  } 
+
+    .visitLink{
+      opacity: 1;
+      height: 40px;
+      width: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 5px;
+      letter-spacing: 2px;
+      font-family: "National Park", sans-serif;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 5px;
+      transition: 0.3s ease-in-out;
+      box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+      -webkit-box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+      -moz-box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+      background:
+linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
+      color: #fff;
+      opacity: 1;
+    }
+
+    .readStory{
+      height: 40px;
+      width: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 5px;
+      letter-spacing: 2px;
+      font-family: "National Park", sans-serif;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 5px;
+      transition: 0.3s ease-in-out;
+      box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+      -webkit-box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+      -moz-box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+      background:
+      linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
+      color: #fff;
+    }
+
+    .visitLink:hover{
+      transform: scale(1.1);
+
+    }
+    .readStory:hover{
+      box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px -1px 24px -1px rgba(0,0,0,0.75);
+      transform: scale(1.1);
+    }
+
+
+
+
+
+    @keyframes shakeWhole {
+      0% { transform: translateX(0); }
+      15% { transform: translateX(-10px); }
+      30% { transform: translateX(10px); }
+      45% { transform: translateX(-10px); }
+      60% { transform: translateX(10px); }
+      75% { transform: translateX(-5px); }
+      90% { transform: translateX(5px); }
+      100% { transform: translateX(0); }
+    }
+    
+    .shakeWhole {
+      animation: shakeWhole 0.6s ease;
+    }
+    /* parent */
+    .parent{
+      padding: 2rem;
+      outline: 2px solid rgb(27, 26, 26);
+      border-radius: 50px;
+      outline-offset: -2px;
+    }
+    body[dark-themes='darkPage'] .arrowIcon {
+      color: #fff; 
+    }
+    
+    body[dark-themes='darkPage'] 
+    .arrowIcon
+    {
+      color: #000; 
+    }
+
+
+    body[dark-themes='darkPage'] 
+    .emailInput
+    {
+      background-color: #e3e1e1;
+      border: 2px solid #a19a9a; 
+      box-shadow: none;
+    }
+    body[dark-themes='darkPage'] 
+.boxEightHead{
+  color: #000;
+}
+body[dark-themes='darkPage'] 
+.sendBtn{
+box-shadow: none;
+color: #fff;
+}
+body[dark-themes='darkPage'] 
+.letsconnectBtn{
+   box-shadow: none;
+   background-color: #c8c8c8;
+   color: #1e1e1e;
+   border: none;
+}
+body[dark-themes='darkPage'] 
+.wrap{
+   box-shadow: none;
+   background-color: #c8c8c8;
+   color: #1e1e1e;
+   border: none;
+}
+body[dark-themes='darkPage'] 
+.stackHeader{
+  color: #1e1e1e;
+}
+    body[dark-themes='darkPage'] 
+    .parent
+    {
+      padding: 2rem;
+      outline: 2px solid #a39999;
+      border-radius: 50px;
+      outline-offset: -2px; 
+    }
+    body[dark-themes='darkPage'] 
+    .introductionText
+    {
+      color: #000; 
+    }
+    body[dark-themes='darkPage'] 
+    .quoteContainer
+    {
+    background-color:#e3e1e1;
+    }
+    body[dark-themes='darkPage'] 
+    .buttonText{
+       color: #1e1e1e;
+       font-weight: 500;
+    }
+    body[dark-themes='darkPage'] 
+    .quoteBox{
+     color: #1e1e1e;
+     border: 2px solid #a19a9a;
+    }
+    body[dark-themes='darkPage'] 
+    .icon{
+         color: #1e1e1e;
+    }
+    body[dark-themes='darkPage'] 
+    .roleText
+    {
+      color: #000; 
+    }
+    
+    body[dark-themes='darkPage'] 
+    .aboutDesc
+    {
+      color: #000; 
+    }
+    body[dark-themes='darkPage'] 
+    .contactHead
+    {
+      color: #000; 
+    }
+    body[dark-themes='darkPage'] 
+    .box
+    {
+      background-color: #e3e1e1;
+    }
+    body[dark-themes='darkPage'] 
+    .carouselText
+    {
+    color: #000;
+    }
+  
+
+  body {
+    background-color: black;
+    color: var(--text_color);
+  }
+
+  body[dark-themes="darkPage"] {
+    background: #c8c8c8;
+    --text_color: black;
+    transition: 0.5s ease-in-out;
+  }
+
+  [dark-themes="darkPage"] {
+    --body_color: white;
+    --text_color: black;
+  }
+
+  body:not([dark-themes="darkPage"]) {
+    --text_color: white;
+  }
+ 
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-template-rows: repeat(3, 250px);
+  }
+
+  .box {
+    background-color:#181818;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text_color);
+    -webkit-box-shadow: -1px 3px 14px 0px rgba(0,0,0,0.51);
+  -moz-box-shadow: -1px 3px 14px 0px rgba(0,0,0,0.51);
+  box-shadow: -1px 3px 14px 0px rgba(0,0,0,0.51);
+  }
+
+  .firstBox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .carouselText{
+    color: var(--light_color);
+  }
+  .contactHead
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light_color);
+  }
+  .aboutDesc{
+    font-size: 17px;
+    letter-spacing: 3px;
+    font-family: "National Park", sans-serif;
+    color: var(--light_color);
+  }
+  .roleText {
+    color: var(--light_color);
+  }
+  .introductionText{
+  color: var(--grey_color);
+  }
+  .roleText {
+    font-size: 18px;
+    font-family: "National Park", sans-serif;
+  }
+
+  .projectOne, .projectTwo {
+    height: 250px;
+    border-radius: 25px;
+    object-fit: fill;
+    transition: 0.4s ease-in-out;
+  }
+
+  .projectOne {
+    width: 250px;
+  }
+
+  .projectTwo {
+    width: 380px;
+  }
+
+  .underline {
+    text-decoration: underline;
+    margin-left: 6px;
+  }
+
+  .connectIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text_color);
+  }
+
+  .leftAbout {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .aboutHeading {
+    font-size: 20px;
+    color: #777777;
+    letter-spacing: 5px;
+    font-weight: 500;
+    font-family: "National Park", sans-serif;
+  }
+
+  .aboutSection {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+
+  }
+
+  .wrapIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 2px solid var(--text_color);
+    outline-offset: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 13px;
+  }
+
+  .aboutSection:hover .arrowIcon {
+    animation: arrowLaunch 1s ease forwards, arrowReturn 0.5s ease 1.2s forwards;
+  }
+
+  @keyframes arrowLaunch {
+    0% {
+      transform: scale(1.1) translateX(0px) translateY(0px);
+    }
+    100% {
+      transform: scale(1.1) translateX(25px) translateY(-25px);
+    }
+  }
+
+  @keyframes arrowReturn {
+    0% {
+      opacity: 0;
+      transform: scale(1.1) translateX(-25px) translateY(25px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.1) translateX(0px) translateY(0px);
+    }
+  }
+
+  .aboutSection:hover .arrowIcon {
+    animation: arrowLaunch 0.6s ease forwards, arrowReturn 0.2s ease 0.6s forwards;
+  }
+
+  .imageHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .myImage {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+  }
+
+  .contactBox {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+    color: var(--text_color);
+  }
+
+  .hobbiesList {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .numberWrap {
+    margin-right: 10px;
+    text-decoration: underline;
+    font-size: 19px;
+    color: var(--text_color);
+  }
+
+  .carouselBox {
+    height: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 230px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    color: var(--text_color);
+  }
+
+  .carouselText {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    color: var(--light_color);
+    font-family: "National Park", sans-serif;
+  }
+
+  .slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-out {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+.imageHolder,.aboutSection,.contactBox,.dividedBox{
+  margin-top:8px;
+}
+
+/* mode */
+
+.daynightModeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.daynightModeContainer > .modesButtonContainerContact {
+  transform: rotate(90deg);
+   margin-left: 1rem;
+}
+
+.labelContact {
+  width: 50px;
+  height: 150px;
+  position: relative;
+  display: block;
+  background-color: #ebebeb;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+.labelContact::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+}
+
+.modeInputContact {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.modeInputContact:checked + .labelContact {
+  background-color: #cdcdcd;
+}
+
+.modeInputContact:checked + .labelContact::after {
+  top: 105px;
+  left: 50px;
+  transform: translateX(-100%);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+.labelContact > .brightnessHalf {
+  color: #3a3a3a;
+  left: 50px;
+  transition: 0.3s;
+}
+
+.labelContact > .brightnessFull {
+  fill: var(--text_color);
+  transition: 0.3s;
+}
+
+.modeInputContact:checked + .labelContact > .sun {
+  fill: var(--text_color);
+}
+
+.modeInputContact:checked + .labelContact > .moon {
+  fill: #7e7e7e;
+}
+
+/* bottomPart */
+.bottomPart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.bottompartHead{
+  font-family: "National Park", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.letsconnectBtn{
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  border:1px double #474444;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  font-family: "National Park", sans-serif;
+   font-weight: 500;
+   font-size: 15px;
+   background-color:rgb(27, 26, 26);
+   box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+-webkit-box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+-moz-box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+color: #c8c8c8;
+}
+.letsconnectBtn:hover{
+  transform: scale(1.1);
+}
+.subscribeContainer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.boxEightHead{
+  padding: 1rem;
+  font-family: "National Park", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #c8c8c8;
+  height: 50px;
+  margin-left: 16px;
+}
+.inputContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.emailInput{
+height: 20px;
+width: 400px;
+border-radius: 15px;
+outline: none;
+padding: 1rem;
+font-size: 20px;
+background-color:rgb(27, 26, 26);
+border: 2px solid #474444;
+color: #9c9595;
+box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+-webkit-box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+-moz-box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+}
+.sendBtn{
+  height: 50px;
+  width: 130px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(27, 26, 26);
+  color: #a39999;
+  box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+-webkit-box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+-moz-box-shadow: 1px -3px 30px 3px rgba(0,0,0,0.63);
+transition: 0.3s ease-in-out;
+}
+.sendBtn:hover{
+  transform: scale(1.1);
+}
+.emailInput::placeholder{
+  font-size: 18px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  font-weight: 500;
+  color: #474444;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+/* stackHeader */
+.carouselWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: scrollCarousel 13s linear infinite;
+}
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.stackImage {
+  height: 60px;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.stackImage {
+  height: 60px;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.stackHeader{
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "National Park", sans-serif;
+  color: #c8c8c8;
+  height: 60px;
+}
+.stacks{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 1rem;
+}
+.stacksContent{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.wrap{
+  height: 90px;
+  width: 90px;
+  border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #1e1e1e;
+box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+.stackImage{
+  height: 60px;
+  width: 60px;
+}
+
+.twitterBox{
+  transition: 0.3s ease-in-out;
+}
+
+.twitterBox:hover{
+background-color: rgb(128, 128, 173);
+}
+.instaBox{
+  transition: 0.3s ease-in-out;
+}
+
+.instaBox:hover{
+background-color:rgb(224, 174, 174);
+}
+.linkBox{
+  transition: 0.3s ease-in-out;
+}
+.linkBox:hover{
+background-color:rgb(106, 76, 106);
+}
+
+.sendBox{
+  transition: 0.3s ease-in-out;
+}
+.sendBox:hover{
+  background-color:rgb(58, 66, 66);
+}
+
+
+.topButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.closeOverlay{
+  border: 2px solid #c8c8c8;
+  outline: none;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.5s ease-in-out;
+
+}
+.closeIconForOverlay{
+  color: #9c9595;
+}
+.closeOverlay:hover{
+  box-shadow: -19px -24px 76px -54px rgba(0,0,0,0.63) inset;
+-webkit-box-shadow: -19px -24px 76px -54px rgba(0,0,0,0.63) inset;
+-moz-box-shadow: -19px -24px 76px -54px rgba(0,0,0,0.63) inset;
+color: #c8c8c8;
+}
+.closeOverlay:hover .closeIconForOverlay{
+  animation: rotateCross 0.3s linear;
+}
+@keyframes rotateCross {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(90deg); }
+}
+.spacerArea{
+  border: 2px solid #6e6a6a;
+  border-radius: 30px;
+  height: 95%;
+  width: 97%;
+  background-color: #111;
+  overflow: scroll;
+  gap: 3rem;
+}
+.appInfoHeader{
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex-direction: column;
+   margin-left: 14%;
+   margin-top: 8%;
+   margin-bottom: 2%;
+}
+.appinfoHead{
+  color:#c8c8c8;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.application{
+margin-top: -10px;
+font-weight: 400;
+letter-spacing: 2px;
+color:#6e6a6a;
+font-family: "National Park", sans-serif;
+}
+.dividerWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+}
+.leftContentOfProduct{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 300px;
+  background-color:#181818;
+  border-radius: 30px;
+  padding: 1.8rem;
+}
+.rightContentOfProduct{
+  width: 580px;
+  height: 560px;
+  background-color:#181818;
+  font-family: "National Park", sans-serif;
+  border-radius: 30px;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.leftContentTextHeader{
+  font-family: "National Park", sans-serif;
+  font-weight: 500;
+  color: #6e6a6a;
+  font-size: 13px;
+  letter-spacing: 1.7px;
+}
+.leftContentTextDisc{
+color: #cdcdcd;
+letter-spacing: 2px;
+font-size: 16px;
+font-family: "National Park", sans-serif;
+}
+.rightContentHeaderHead{
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "National Park", sans-serif;
+  letter-spacing: 1px;
+  color: #6e6a6a;
+  }
+  .rightContentDisc{
+    font-size: 20px;
+    color: #cdcdcd;
+    line-height: 40px;
+  }
+  .checkOut{
+    height: 50px;
+    width:230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: #cdcdcd;
+    border-radius: 30px;
+    outline: none;
+    border: 1.8px solid #6e6a6a;
+    gap: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+  .checkOut:hover{
+    box-shadow: 0px 0px 77px -1px rgba(222,203,203,0.75) inset;
+    -webkit-box-shadow: 0px 0px 77px -1px rgba(222,203,203,0.75) inset;
+    -moz-box-shadow: 0px 0px 77px -1px rgba(222,203,203,0.75) inset;
+  }
+  .parentForimageWrapForRightContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .imageWrapForRightContent{
+    width: 1000px;
+    height: 400px;
+  }
+  .projectOneContentImage{
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+  }
+  .processOfDevelopment{
+   padding: 2rem;
+   margin-top: 2rem;
+  }
+  .processOfDevelopmentForSolution{
+padding: 2rem;
+  }
+  .processOfDevelopmentHead{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .processOfDevelopmentHeader{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "National Park", sans-serif;
+    letter-spacing: 1px;
+    color: #cdcdcd; 
+  }
+  .processOfDevelopmentHeaderSolution{
+    font-size: 25px;
+    font-weight: 500;
+    font-family: "National Park", sans-serif;
+    letter-spacing: 1px;
+    color: #cdcdcd; 
+  }
+  .solutionforProcessofDevelopment{
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 500;
+    color:#a39999;
+    font-family: "National Park", sans-serif;
+  }
+  .processOfDevelopmentDiscription{
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 500;
+    color:#a39999;
+    font-family: "National Park", sans-serif;
+  }
+  .listOfdisc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .listItem{
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 500;
+    color:#a39999;
+    font-family: "National Park", sans-serif;
+  }
+  .imageWrapForRightContentProjectTwo{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .overlayTwoForProjectThree{
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeInOverlay 0.5s ease forwards;
+  }
+  .modalContentForProjectThree{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background:#111;
+    animation: slideDown 0.5s ease forwards;
+  }
+.spacerAreaForProjectThree{
+  overflow: scroll;
+  width: 97%;
+  height: 95%;
+  border: 2px solid #6e6a6a;
+  border-radius: 30px;
+}
+.factsAboutMe{
+  font-size: 17px;
+  font-family: "National Park", sans-serif;
+  text-align: center;
+}
+.leftABoutMeTop{
+  width:470px;
+  height: 700px;
+  background-color:#181818;
+  padding: 2rem;
+  border-radius: 35px;
+  margin-top: 2rem;
+}
+.aboutMeHeader{
+  font-size: 29px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  color: #cdcdcd;
+}
+.aboutMesubHeading{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  color: #6e6a6a;
+}
+.aboutMeInfo{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.aboutMeDisc{
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+   line-height: 35px;
+   color: #c8c8c8;
+}
+.subHeadCurrent{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  color: #6e6a6a;
+}
+.whatQuestion{
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  line-height: 35px;
+  color: #c8c8c8;
+}
+.leftAboutMeBottom{
+  height: 350px;
+  width:470px;
+  background-color:#181818;
+  padding: 2rem;
+  border-radius: 35px;
+  margin-bottom: 2rem;
+}
+.leftABoutMe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.leftAboutMeHeader{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  color: #6e6a6a;
+  line-height: 50px;
+}
+.postOfMeSubHead{
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  color: #6e6a6a;
+}
+.postOfMe{
+   text-align:left;
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-family: "National Park", sans-serif;
+  line-height: 35px;
+  color: #c8c8c8;
+  font-weight: 500;
+}
+.redirectBtn{
+  transition: 0.3s ease-in-out;
+  transform: translateY(7px) rotate(90deg);
+}
+.redirectBtn:hover{
+transform: rotate(360deg) scale(1.5);
+color: tomato;
+}
+.carouselImageOne,.carouselImageTwo,.carouselImageThree{
+  height: 300px;
+  width: 400px;
+}
+.carouselContainer {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  border-radius: 10px;
+  background: #181818;
+  color: white;
+  border-radius: 30px;
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carouselItem {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.paginationDots {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  gap: 10px;
+  background: #181818;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #444;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+.dataCarouselTitle{
+  text-align: left;
+  font-size:18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-family: "National Park", sans-serif;
+  color: #c8c8c8;
+  padding-left: 1rem;
+}
+.dataCarouselParagraph{
+  text-align: left;
+  font-size: 19px;
+  font-family: "National Park", sans-serif;
+  color: #c8c8c8;
+  padding-left: 1rem;
+}
+.rightAboutMeStacks>.stacks{
+  width: 470px;
+}
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 470px;
+  height: 300px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.slide-stage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1;
+}
+
+
+
+
+
+.carouselBox {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Animation */
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.slideFromRight {
+  animation: slideFromRight 0.8s ease-in-out;
+}
+
+/* Animation classes */
+.exit-right {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.exit-left {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.enter-right {
+  transform: translateX(100%);
+  animation: slideInRight 0.3s forwards;
+  z-index: 2;
+}
+
+.enter-left {
+  transform: translateX(-100%);
+  animation: slideInLeft 0.3s forwards;
+  z-index: 2;
+}
+
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Navigation buttons */
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 10;
+  color: #fff;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+.lastContentOfRight{
+  height: 220px;
+  width: 500px;
+  background-color: #181818;
+  border-radius: 30px;
+}
+.lastContent{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem;
+  flex-direction: column;
+}
+.copyMailHead{
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "National Park", sans-serif;
+  color: #c8c8c8;
+}
+.copyMailWrapper{
+  height: 60px;
+  width: 100%;
+  background-color:#202020;
+  border-radius:10px;
+  cursor: pointer;
+  }
+.copyEmail{
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5px;  
+font-size: 19px;
+letter-spacing: 1px;
+font-family: "National Park", sans-serif;
+color:#777777;
+}
+.contentOfAboutMe{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+}
+.rightAboutmeWrapper{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  flex-direction: column;
+}
+.copyMailWrapper:hover{
+  box-shadow: 0px -3px 85px -42px rgba(24,24,24,0.56) inset;
+-webkit-box-shadow: 0px -3px 85px -42px rgba(24,24,24,0.56) inset;
+-moz-box-shadow: 0px -3px 85px -42px rgba(24,24,24,0.56) inset;
+}
+
+
+
+
+
+
+
+@media (max-width: 1094px) {
+  .leftABoutMeTop{
+    height: 80%;
+  }
+  .leftAboutMeBottom{
+    height: 300px;
+  }
+  .lastContentOfRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+  .rightAboutMeStacks{
+    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .contentOfAboutMe {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftAboutMeWrapper, 
+  .rightAboutmeWrapper,
+  .leftABoutMeTop,
+  .leftAboutMeBottom,
+  .rightAboutMeStacks > .stacks,
+  .lastContentOfRight {
+    width: 90% !important;
+  }
+
+  .carouselImageOne, 
+  .carouselImageTwo, 
+  .carouselImageThree,
+  .slider-wrapper {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .factsAboutMe {
+    font-size: 15px;
+    padding: 0 1rem;
+  }
+
+  .aboutMeHeader {
+    font-size: 24px;
+  }
+
+  .aboutMesubHeading,
+  .subHeadCurrent,
+  .leftAboutMeHeader,
+  .postOfMeSubHead {
+    font-size: 12px;
+  }
+
+  .aboutMeDisc,
+  .whatQuestion,
+  .postOfMe,
+  .dataCarouselParagraph {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .dataCarouselTitle {
+    font-size: 16px;
+  }
+
+  .copyMailHead {
+    font-size: 22px;
+  }
+
+  .copyEmail {
+    font-size: 16px;
+  }
+
+  .carouselContainer {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.twitterBox,.instaBox,.linkBox,.sendBox{
+  height: 70px;
+  width: 70px;
+}
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(2, 50px);
+  gap: 45px;
+}
+.modesSwitch{
+  height: 200px;
+  width: 230px;
+}
+.bottomPart{
+  height: 250px;
+  width: 230px;
+}
+.contactBox{
+  width: 250px;
+
+}
+/* responsiveness */
+
+ @media (max-width: 1210px) {
+  .twitterBox, .instaBox, .linkBox, .sendBox {
+    height: 110px;
+    width: 110px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 15px;
+  }
+
+  /* Row 1 */
+  .firstBox {
+    grid-column: 1 / span 5 !important;
+    grid-row: 1 !important;
+    height: 200px !important;
+  }
+
+  /* Row 2 */
+  .imageHolder {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    height: 250px;
+    width: 250px;
+  }
+
+  .aboutSection {
+    grid-column: 2 / span 4 !important;
+    grid-row: 2 !important;
+    height: auto !important;
+  }
+
+  /* Row 3 */
+  .projectTwoBox {
+    grid-column: 1 / span 3 !important; /* First 50% (3 out of 6 columns) */
+    grid-row: 3 !important;
+    height: 340px !important;
+  }
+
+  .imageBox {
+    grid-column: 4 / span 3 !important; /* Next 50% (3 out of 6 columns) */
+    grid-row: 3 !important;
+    height: 340px !important;
+  }
+
+  /* Row 4 */
+  .contactBox {
+    grid-column: 1 / span 2 !important;
+    grid-row: 4 !important;
+    height: 300px !important;
+  }
+
+  .flexed {
+    grid-row: 6 !important;
+    grid-column: 3 / span 2 !important;
+    gap: 15px !important;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .dividedBox {
+    grid-column: 3 !important;
+    grid-row: 4 !important;
+    height: auto !important;
+    flex-direction: column !important;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  /* Row 5 */
+  .subscribeContainer {
+    grid-column: 1 / span 4 !important;
+    grid-row: 5 !important;
+    height: auto !important;
+  }
+
+  .stacks {
+    grid-column: 5 !important;
+    grid-row: 5 !important;
+    height: auto !important;
+    width: 230px;
+  }
+
+  .lastArt {
+    grid-column: 5 !important;
+    grid-row: 4 !important;
+    height: 300px !important;
+    margin-top: 1rem;
+  }
+
+  /* Adjust element sizes for responsiveness */
+  .projectOne, .projectTwo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .myImage {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .carouselBox {
+    width: 100%;
+  }
+
+  .emailInput {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modesSwitch {
+    height: 100px !important;
+    padding: 15px;
+  }
+
+  .bottomPart {
+    height: auto !important;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 941px) {
+  .imageHolder {
+    display: none;
+  }
+  .aboutSection {
+    grid-column: 1 / span 5 !important;
+    grid-row: 2 !important;
+    height: 250px !important;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .imageBox {
+    grid-column: 1 / span 5 !important;
+    grid-row: 3 !important;
+    height: 500px !important;
+  }
+
+  .projectTwoBox {
+    grid-column: 1 / span 5 !important;
+    grid-row: 4 !important;
+    height: 500px !important;
+  }
+
+  .boxEightHead {
+    font-size: 20px;
+  }
+  .contactBox {
+    grid-column: 1 / span 5 !important;
+    grid-row: 5 !important;
+  }
+  .lastArt {
+    grid-column: 4 !important;
+    grid-row: 6 !important;
+    width: 200px;
+    margin: 0;
+  }
+  .dividedBox {
+    grid-column: 5 / span 2 !important;
+    grid-row: 6 !important;
+  }
+  .contactBox {
+    grid-column: 1 / span 2 !important;
+    grid-row: 6 !important;
+  }
+  .flexed {
+    grid-row: 7 !important;
+    grid-column: 3 / span 2 !important;
+    gap: 15px !important;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6rem;
+  }
+  .modesSwitch {
+    width: 200px;
+  }
+  .bottomPart {
+    width: 200px;
+  }
+  .letsconnectBtn {
+    height: 40px;
+    width: 140px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 850px) {
+  .subscribeContainer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-row: 5 !important;
+    grid-column: 1 / span 5 !important;
+    gap: 15px !important;
+    height: 150px;
+  }
+  .stacks {
+    grid-row: 6 !important;
+    grid-column: 4 / span 1 !important;
+    gap: 15px !important;
+    margin-top: 10px;
+  }
+  .contactBox {
+    grid-row: 6 !important;
+    grid-column: 1 !important;
+    gap: 15px !important;
+  }
+  .lastArt {
+    grid-row: 8 !important;
+    grid-column: 1 / span 3 !important;
+    gap: 15px !important;
+    height: 150px;
+    width: 260px;
+    margin-top: 1rem;
+  }
+  .dividedBox {
+    grid-row: 8 !important;
+    grid-column: 4 / span 4 !important;
+    gap: 15px !important;
+    height: 150px;
+  }
+  .twitterBox, .instaBox, .linkBox, .sendBox {
+    height: 70px;
+    width: 70px;
+  }
+  .box-container {
+    position: absolute;
+    bottom: 0;
+    left: -55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .flexed {
+    position: relative;
+    grid-row: 10 !important;
+    grid-column: 1 !important;
+  }
+}
+@media (max-width: 570px) {
+.emailInput{
+  width: 80%;
+  font-size: 15px;
+}
+.emailInput::placeholder{
+  font-size: 12px;
+}
+.sendBtn{
+  width: 100px;
+}
+}
+ @media (max-width: 652px) {
+  .firstBox {
+    grid-column: 1 / span 5 !important;
+    grid-row: 1 !important;
+    height: auto !important;
+  }
+
+
+  .twitterBox,
+  .instaBox,
+  .linkBox,
+  .sendBox {
+    height: 70px;
+    width: 70px; 
+    max-width: 70px; 
+  }
+
+  .aboutSection {
+    grid-column: 1 / span 5 !important;
+    grid-row: 2 !important;
+    height: auto !important;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .imageBox {
+    grid-column: 1 / span 5 !important;
+    grid-row: 3 !important;
+    height: auto !important;
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .projectTwoBox {
+    grid-column: 1 / span 5 !important;
+    grid-row: 4 !important;
+    height: auto !important;
+    max-height: 350px;
+  }
+
+  .contactBox {
+    grid-column: 1 / span 5 !important;
+    grid-row: 6 !important;
+    height: auto !important;
+    max-height: 350px;
+  }
+
+  .lastArt {
+    grid-column: 2 / span 5 !important; 
+    grid-row: 8 !important;
+    height: 200px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .dividedBox {
+    grid-column: 1 / span 5 !important; 
+    grid-row: 9 !important;
+    height: 300px;
+  }
+
+  .subscribeContainer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-row: 5 !important;
+    grid-column: 1 / span 5 !important;
+    gap: 15px !important;
+    height: auto !important;
+  }
+
+  .stacks {
+    grid-row: 7 !important;
+    grid-column: 1 / span 5 !important;
+    gap: 15px !important;
+    margin-top: 10px;
+  }
+
+
+  .box-container,
+  .bottomPart,
+  .modesSwitch {
+    width: 100%; 
+  }
+
+  .letsconnectBtn {
+    height: 40px;
+    width: 140px;
+    font-size: 12px;
+  }
+  .contactBox,
+  .stacks {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 240px !important;
+    max-height: 240px !important;
+    box-sizing: border-box;
+    padding: 0 1rem;
+  }
+  .dividedBox{
+    margin: 0;
+    padding: 0;
+  }
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(2, 50px);
+    gap: 45px;
+  }
+  .flexed{
+    grid-column: 1 / span 4 !important;
+    grid-row: 27 !important;
+    height: auto !important;
+  }
+}
+
+@media (max-width: 454px) {
+  .lastArt{
+   margin-left: -30px;
+  }
+}
+@media (max-width: 365px) {
+  .lastArt{
+   margin-left: -50px;
+  }
+}
+
+
+
+/* Responsive for overlays */
+@media (max-width: 1071px) {
+  .dividerWrapper {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .leftContentOfProduct,
+  .rightContentOfProduct,
+  .parentForimageWrapForRightContent,
+  .processOfDevelopment,
+  .processOfDevelopmentForSolution {
+    width: 80% !important;
+    max-width:80% !important;
+    flex: none !important;
+    height: auto !important;
+  }
+
+  .imageWrapForRightContent {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .projectOneContentImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .rightContentBtnWrapper {
+    justify-content: center;
+    display: flex;
+  }
+  .processOfDevelopmentForSolution {
+    width: 100%;
+    max-width: 600px; /* or match whatever left/right content uses */
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .imageWrapForRightContent{
+   display: none;
+  }
+  .imageWrapForRightContentProjectTwo{
+    display: none;
+  }
+  .projectOneContentImage{
+    display: none;
+  }
+}
+
+@media (max-width: 632px) {
+  .processOfDevelopmentDiscription,.solutionforProcessofDevelopment{
+    font-size: 20px;
+  }
+
+}
+
+
