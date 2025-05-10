@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useRef } from 'react';
+import '../quotebox/Quotebox'
 import './homescreen.css'
 import { Linkedin } from 'lucide-react';
 import { ChevronRight } from 'lucide-react';
@@ -15,13 +16,13 @@ import { useEffect } from "react";
 import { Moon } from 'lucide-react';
 import { Sun } from 'lucide-react';
 import { Dribbble } from 'lucide-react';
-import Art from "../../pixelportrait/art"
 import { MoveUpRight } from 'lucide-react';
 import { BookOpenText } from 'lucide-react';
 import { LogOut } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 import { CircleArrowOutUpRight } from 'lucide-react';
 import { X } from 'lucide-react';
+import Quotebox from '../quotebox/Quotebox';
 const services = [
   "Full-Stack Web Development (MERN)",
   "Landing Page & Portfolio Design",
@@ -56,6 +57,48 @@ const slideImages = [
 ];
 
 const Homescreen = () => {
+
+
+  const [quote, setQuote] = useState('');
+  const [author, setAuthor] = useState('');
+
+  const fetchQuote = async () => {
+    try {
+      let validQuote = null;
+
+      // Keep fetching until a quote with <= 10 words is found
+      while (!validQuote) {
+        const res = await fetch('/quote');
+        if (!res.ok) throw new Error("Network response was not ok");
+
+        const text = await res.text();
+        const data = JSON.parse(text);
+
+        if (data.content.split(' ').length <= 10) {
+          validQuote = data;
+        }
+      }
+
+      setQuote(validQuote.content);
+      setAuthor(validQuote.author);
+    } catch (error) {
+      console.error("Fetch error:", error);
+      setQuote("Failed to fetch quote.");
+      setAuthor("");
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSliding, setIsSliding] = useState(false);
   const [direction, setDirection] = useState('');
@@ -953,7 +996,7 @@ const handleTouchEnd = (e) => {
 </div>
 
   <div className="box lastArt" style={{ gridColumn: "5", gridRow: "3" }}>
-  <Art/>
+  <Quotebox/>
   </div>
 </div>
 
