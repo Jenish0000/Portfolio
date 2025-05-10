@@ -585,22 +585,34 @@ const handleTouchEnd = (e) => {
   
 <div className="box-container">
     <div className="box twitterBox">
-     <XIcon className='connectIcon' style={{fontSize:"25px"}}/>
+     <XIcon className='connectIcon' style={{fontSize:"25px"}} 
+       onClick={() => window.open('https://x.com/JenishKarki20', '_blank')}
+     />
     </div>
     <div className="box instaBox">
-    <Instagram className='connectIcon' style={{fontSize:"30px"}}/>
+    <Instagram className='connectIcon' style={{fontSize:"30px"}}
+       onClick={() => window.open('https://www.instagram.com/_jenishkarki_/?next=%2F&hl=en', '_blank')}
+    />
     </div>
     <div className="box twitterBox">
-    <Linkedin className='connectIcon' style={{fontSize:"30px"}}/>
+    <Linkedin className='connectIcon' style={{fontSize:"30px"}}
+    onClick={() => window.open('https://www.linkedin.com/in/jenish-karki-936284235/', '_blank')}
+    />
     </div>
     <div className="box linkBox">
-      <Mail className='connectIcon' style={{fontSize:"30px"}}/>
+      <Mail className='connectIcon' style={{fontSize:"30px"}}
+      onClick={() => window.location.href = 'mailto:jenish.karki75@gmail.com'}
+      />
     </div>
     <div className="box instaBox">
-<Dribbble className='connectIcon' style={{fontSize:"30px"}}/>
+<Dribbble className='connectIcon' style={{fontSize:"30px"}}
+ onClick={() => window.open('https://dribbble.com/qoefjKnSEUEUUEUEUEUEUEUEUUEUE', '_blank')}
+/>
     </div>
     <div className="box sendBox">
-    <Send className='connectIcon' style={{fontSize:"30px"}}/>
+    <Send className='connectIcon' style={{fontSize:"30px"}}
+     onClick={() => window.location.href = 'mailto:jenish.karki75@gmail.com'}
+    />
     </div>
     
   </div>
