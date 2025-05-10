@@ -15,7 +15,7 @@ import { useEffect } from "react";
 import { Moon } from 'lucide-react';
 import { Sun } from 'lucide-react';
 import { Dribbble } from 'lucide-react';
-import Art from '../pixelpotrait/art';
+import Art from "../../pixelportrait/art"
 import { MoveUpRight } from 'lucide-react';
 import { BookOpenText } from 'lucide-react';
 import { LogOut } from 'lucide-react';
