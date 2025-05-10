@@ -70,7 +70,6 @@
 
   .projectTwoBox{
     position: relative;
-     height:350px;
   }
   .overlayTwo ,.overlayTwoForProjectTwo{
     position: fixed;
@@ -1581,7 +1580,7 @@ color:#777777;
   .projectTwoBox {
     grid-column: 1 / span 3 !important; /* First 50% (3 out of 6 columns) */
     grid-row: 3 !important;
-    height: 340px !important;
+    height: 300px !important;
   }
 
   .imageBox {
@@ -1996,7 +1995,9 @@ color:#777777;
   .processOfDevelopmentDiscription,.solutionforProcessofDevelopment{
     font-size: 20px;
   }
-
+  .projectTwoBox{
+    height: 280px !important;
+  }
 }
 
 
