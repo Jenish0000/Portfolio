@@ -70,6 +70,7 @@
 
   .projectTwoBox{
     position: relative;
+     height:350px;
   }
   .overlayTwo ,.overlayTwoForProjectTwo{
     position: fixed;
